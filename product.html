@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <button type="button" onclick="showProduct(products)">Click me to Show Product</button>
+    <p id="demo"></p>
+    <script>
+        const products = [
+            {
+                id: "01",
+                name: "Lego Marvel Infinity party camp",
+                price: "599 Baht",
+                img: "img/img1.jpg"
+            },
+            {
+                id: '02',
+                name: "Lego Infinity Guanlet",
+                price: "599 Baht",
+                img: "img/img2.jpg"
+            },
+            {
+                id: '03',
+                name: "Lego Spiderman Racing",
+                price: '599 Baht',
+                img: "img/img3.jpg"
+            },
+            {
+                id: '04',
+                name: "Lego Avenger Tower",
+                price: '599 Baht',
+                img: "img/img4.jpg"
+            },
+            {
+                id: '05',
+                name: "Lego Ferrari",
+                price: '899 Baht',
+                img: "img/img5.png"
+            },
+            {
+                id: '06',
+                name: "Lego Ferrari V2",
+                price: '899 Baht',
+                img: "img/img6.png"
+            },
+            {
+                id: '07',
+                name: "Black Panther",
+                price: '499 Baht',
+                img: "img/img7.jpg"
+            },
+            {
+                id: '08',
+                name: "Mjornir",
+                price: '499 Baht',
+                img: "img/img8.png"
+            },
+            {
+                id: '09',
+                name: "Thor Machine",
+                price: '599 Baht',
+                img: "img/img9.png"
+            },
+            {
+                id: '10',
+                name: "Thor",
+                price: '399 Baht',
+                img: "img/img10.png"
+            },
+        ]
+        let text = "<ul>";
+        let x = document.getElementById("demo")
+        products.forEach(showProduct);
+        text += "</ul>";
+        x.innerHTML = text;
+
+        function showProduct(value) {
+            text += `<li>ID: ${value.id} <br>Name: ${value.name} <br>Price: ${value.price} <br><img src=${value.img}></li>`
+            
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        } 
+    </script>
+
+
+</body>
+
+</html>
